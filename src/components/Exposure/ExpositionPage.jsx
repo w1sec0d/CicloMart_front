@@ -88,7 +88,7 @@ const ExpositionPage = () => {
         rounded-lg mt-4 mb-8 shadow-lg shadow-black/35"
       >
         <div className="w-full h-14 bg-primary rounded-t-lg flex items-center justify-center drop-shadow-lg">
-          <h1 className="text-2xl font-bold ">
+          <h1 className="text-xl font-bold p-5 sm:p-0 sm-text-2xl text-center">
             Selecciona tu grado de exposición
           </h1>
         </div>
@@ -109,7 +109,7 @@ const ExpositionPage = () => {
               </Link>
             </p>
 
-            <div className="grid grid-cols-2 gap-4 ">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
               <ExposurePrice
                 grade={1}
                 price={producto.precio}

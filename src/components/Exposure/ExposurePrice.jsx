@@ -52,14 +52,14 @@ const ExposurePrice = ({ grade, children, price, setSelected, selected }) => {
 
   return (
     <div
-      className={`${selected === grade ? 'border-dashed border-2 border-primaryDark' : ''} bg-white h-60 w-full rounded-xl flex flex-col items-center shadow-xl`}
+      className={`${selected === grade ? 'border-dashed border-2 border-primaryDark' : ''} bg-white h-auto w-full rounded-xl flex flex-col items-center shadow-xl p-4`}
     >
-      <div className="w-full bg-primary h-28   rounded-t-xl flex items-center justify-center mb-4 drop-shadow-lg">
-        <h3 className="font-bold">Grado {grade}</h3>
+      <div className="w-full bg-primary h-28 rounded-t-xl flex items-center justify-center mb-4 drop-shadow-lg">
+        <h3 className="font-bold text-center">Grado {grade}</h3>
       </div>
       {/*Se usa para calcular precio o para hacer un display del porcentaje */}
       <div className="h-full w-full flex flex-col justify-center items-center pt-2">
-        <b className="text-primary text-2xl mb-3">
+        <b className="text-primary text-2xl mb-3 text-center">
           {price ? (
             `${colombianPrice(gradePrice)} COP`
           ) : grade > 1 ? (
