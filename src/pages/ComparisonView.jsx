@@ -1,16 +1,11 @@
-// Utilidades
+import React from 'react'
 import { useQuery } from 'react-query'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { getProductById } from '../services/productService'
-import { Link } from 'react-router-dom'
-
-// Componentes
 import BuyButton from '../components/Comparison/BuyButton'
 import ComparisionSection from '../components/Comparison/ComparisionSection'
 import Loading from '../components/Loading'
 import DisplayImg from '../components/Comparison/DisplayImg'
-
-// Iconos
 import SouthIcon from '@mui/icons-material/South'
 import Photo from '../assets/userPhoto.png'
 
@@ -103,7 +98,7 @@ const ComparisonView = () => {
           <DisplayImg product={product1} />
           <DisplayImg product={product2} />
         </div>
-        {/*Sección elementos compartidos producto 1 y 2 respectviamente */}
+        {/*Sección elementos compartidos producto 1 y 2 respectvamente */}
         <ComparisionSection
           title={'Elementos Compartidos'}
           product1={product1}
@@ -112,7 +107,7 @@ const ComparisonView = () => {
           highlightDiffs={true}
         />
         {/*Sección elementos Agregados */}
-        {discrepancies ? (
+        {discrepancies.length > 0 && (
           <ComparisionSection
             title={'Agregados'}
             className1={'rounded-bl-3xl'}
@@ -121,7 +116,7 @@ const ComparisonView = () => {
             product2={product2}
             coincidences={discrepancies}
           />
-        ) : null}
+        )}
       </div>
 
       <div className="flex justify-center">
