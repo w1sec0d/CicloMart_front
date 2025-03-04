@@ -10,6 +10,8 @@ import {
   DirectionsBike,
   Build,
   Publish,
+  Login,
+  PersonAdd,
 } from '@mui/icons-material'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
@@ -86,7 +88,7 @@ const Navbar = () => {
         </li>
         <li className="py-2 lg:py-0 lg:px-4 hover:font-bold text-center flex items-center justify-center">
           <Button
-            className="text-white bg-secondary w-full max-w-[250px] lg:w-auto text-base outline-none focus:outline-primary active:outline-primary hover:bg-secondary/90 font-semibold"
+            className="text-white bg-tertiary w-full max-w-[250px] lg:w-auto text-base outline-none focus:outline-primary active:outline-primary hover:bg-tertiary/90 font-semibold"
             to="/search/bycicle"
             onClick={handleLinkClick}
           >
@@ -95,7 +97,7 @@ const Navbar = () => {
         </li>
         <li className="py-2 lg:py-0 lg:px-4 hover:font-bold text-center flex items-center justify-center">
           <Button
-            className="text-white bg-secondary w-full max-w-[250px] lg:w-auto text-base outline-none focus:outline-primary active:outline-primary hover:bg-secondary/90 font-semibold"
+            className="text-white bg-tertiary w-full max-w-[250px] lg:w-auto text-base outline-none focus:outline-primary active:outline-primary hover:bg-tertiary/90 font-semibold"
             to="/search/component"
             onClick={handleLinkClick}
           >
@@ -126,18 +128,18 @@ const Navbar = () => {
         ) : (
           <li className="py-2 lg:py-0 lg:px-4 hover:font-bold text-center flex flex-col lg:flex-row items-center justify-center gap-2">
             <Button
-              className="text-white bg-tertiary w-full max-w-[200px] lg:w-auto text-base outline-none focus:outline-primary active:outline-primary hover:bg-tertiary/90 mb-2 lg:mb-0 lg:mr-2 font-bold"
+              className="text-white bg-secondary w-full max-w-[200px] lg:w-auto text-base outline-none focus:outline-primary active:outline-primary hover:bg-secondary/90 mb-2 lg:mb-0 lg:mr-2 font-bold"
               to="/login"
               onClick={handleLinkClick}
             >
-              Inicia sesión
+              <Login className="mr-2" /> Inicia sesión
             </Button>
             <Button
-              className="text-white bg-tertiary w-full max-w-[200px] lg:w-auto text-base outline-none focus:outline-primary active:outline-primary hover:bg-tertiary/90 font-bold"
+              className="text-white bg-secondary w-full max-w-[200px] lg:w-auto text-base outline-none focus:outline-primary active:outline-primary hover:bg-secondary/90 font-bold"
               to="/register"
               onClick={handleLinkClick}
             >
-              Regístrate
+              <PersonAdd className="mr-2" /> Regístrate
             </Button>
           </li>
         )}

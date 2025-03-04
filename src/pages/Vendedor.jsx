@@ -18,11 +18,11 @@ const Navbar = ({ setFilter }) => {
     'rounded-full p-1 bg-lgray hover:bg-blue-500 hover:text-white transition-all duration-300'
 
   return (
-    <nav className="flex items-center justify-between w-full gap-8 px-6 py-3">
+    <nav className="flex items-center justify-between w-full gap-8 px-6 py-3 flex-wrap">
       <div>
         <h1 className="flex text-3xl font-bold">Reseñas</h1>
       </div>
-      <div className="rounded-full bg-lgray p-2 px-3 space-x-4 items-center">
+      <div className="rounded-lg md:rounded-full bg-lgray p-2 px-3 space-x-4 items-center w-full md:w-fit flex flex-wrap justify-center">
         {['Recientes', 'Con Fotos', 'Positivas', 'Neutrales', 'Negativas'].map(
           (label) => (
             <button
@@ -199,7 +199,7 @@ const Vendedor = () => {
               )}
             </div>
           </div>
-          <div className="justify-center items-center mt-32">
+          <div className="justify-center items-center my-8 lg:mt-32">
             {filterResults.length === 0 && (
               <div className="flex flex-col items-center justify-center">
                 <SentimentDissatisfiedIcon style={{ fontSize: 60 }} />

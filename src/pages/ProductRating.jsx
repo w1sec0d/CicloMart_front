@@ -283,7 +283,7 @@ const ProductRating = ({ telefono }) => {
       </div>
       <div className="h-auto w-full border border-primary mt-6 rounded-xl p-4 md:p-8 shadow-xl flex flex-col md:flex-row mb-6">
         <div className="flex flex-col md:flex-row w-full">
-          <div className="flex items-start space-x-12 border-lgray border-r pr-8">
+          <div className="flex items-start space-x-12 border-lgray border-r pr-8 flex-wrap">
             <div className="flex space-x-5 items-center">
               <div className="text-7xl font-bold text-primary">
                 {(avgRating || 0).toFixed(1)}
@@ -297,7 +297,7 @@ const ProductRating = ({ telefono }) => {
                 <p className="text-sm">{commentList.length} comentario(s)</p>
               </div>
             </div>
-            <div className="flex flex-col space-y-4">
+            <div className="flex flex-col space-y-4 mt-8 lg:mt-0">
               {commentList.length != 0 &&
                 commentList.map((val, key) => (
                   <div key={val.idCalificacion}>
